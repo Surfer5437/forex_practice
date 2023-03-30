@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="stylesheet" href="/static/app.css"> 
+   <title>Forex Converter</title>
+</head>
+<body class="bg ">
+    
+    <form class="white center_content" method="POST">
+        {% if info %}
+        <label name='rate'>The converted amount is: {{info}}</label>
+        {% endif %}
+        <h1>Forex Converter</h1>
+        <label for="converting_from">Converting from:</label>
+        <input type="text" name="converting_from" id="converting_from"><br>
+        <label for="converting_to">Converting to:</label>
+        <input type="text" name="converting_to" id="converting_to"><br>
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" id="amount"><br>
+        <button id="submit">Convert</button>
+    </form>
+</body>
+</html>
